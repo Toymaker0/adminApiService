@@ -1,0 +1,34 @@
+
+version: '3.9'
+
+services:
+  node_app:
+    container_name: node_app
+    build: 
+      context: ./fri
+      dockerfile: Dockerfile
+    
+    ports:
+      - "3000:3000"
+    environment:
+      - PG_DB=management
+      - PG_USER=postgres
+      - PG_PASSWORD=123
+    depends_on:
+      - node_db
+    restart: always
+
+  node_db:  # Fix: Move this to the same level as node_app
+    container_name: node_db
+    image: postgres:12
+    ports: 
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: management
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "123"
+   
+    restart: always
+
+volumes:
+  node_db_data: {}
