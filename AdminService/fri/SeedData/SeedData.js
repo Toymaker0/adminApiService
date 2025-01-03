@@ -1,4 +1,6 @@
 import sequelize_conn from "../Database/Db.js";
+import HubsClass from "../DataManagement/Hub.class.js";
+import hubsDetails from "../SeedData/Hubs/hubs.json";
 
 const schemasList = [
     "route_management"
@@ -17,7 +19,7 @@ const excuteSeedlings=async()=>{
             await sequelize_conn.createSchema(schema);
           }
         });
-        // await sequelize_conn.sync({ alter: true });
+       await sequelize_conn.sync({ alter: true });
     
         // const checkExtensionQuery = `SELECT * FROM pg_extension WHERE extname = 'pgrouting'`;
     
@@ -29,12 +31,26 @@ const excuteSeedlings=async()=>{
         //   await sequelize_conn.query(`CREATE EXTENSION pgrouting`, { raw: true });
         // }
     
-        // seedDataIntoTables();
+         seedDataIntoTables();
         // deleteTileData();
       } catch (err) {
         console.log(err);
         
       }
 }
+const seedDataIntoTables = async function () {
+  const hubsClass = new HubsClass()
+    
+  try {
+    let result = await hubsClass.getHubs();
+    if (!result || !result.length) {
+      await hubsClass.addBulkHubs(hubsDetails);
+    }
+
+  } catch (err) {
+    console.log(err);
+    
+  }
+};
 
 export  {SeedData,excuteSeedlings}
