@@ -1,5 +1,7 @@
-import sequelize_conn from "../Database/Db";
+import sequelize_conn from "../Database/Db.js";
 import Sequelize from "sequelize";
+
+
 
 const Hubs = sequelize_conn.define('hubs', {
     hub_id: {
@@ -15,9 +17,9 @@ const Hubs = sequelize_conn.define('hubs', {
         type: Sequelize.STRING(255),
     },
     hub_coordinates: {
-        type: Sequelize.GEOMETRY('POINT', 4326),
+        type: Sequelize.STRING('POINT', 432),
         allowNull: false,
-        unique: true
+        
     },
     },{ schema: "route_management"}
 );
