@@ -15,15 +15,15 @@ const RoutesModel = sequelize_conn.define('routes', {
         allowNull: false
     },
     start_location_coordinates: {
-        type: Sequelize.STRING(4326),
+        type: Sequelize.GEOMETRY('POINT', 4326),
         allowNull: false
     },
     end_location_coordinates: {
-        type: Sequelize.STRING(4326),
+        type: Sequelize.GEOMETRY('POINT', 4326),
         allowNull: false
     },
     route_coordinates: {
-        type: Sequelize.STRING(4326),
+        type: Sequelize.GEOMETRY('LINESTRING', 4326),
         //allowNull: false
     },
     route_total_stops: {

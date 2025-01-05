@@ -2,7 +2,7 @@ import sequelize_conn from "../Database/Db.js";
 import Sequelize from "sequelize";
 
 
-const HubStops = sequelize_conn?.define('hub_stops', {
+const HubStopsModel = sequelize_conn?.define('hub_stops', {
     hub_id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -21,4 +21,4 @@ const HubStops = sequelize_conn?.define('hub_stops', {
     }},{ schema: "route_management" }
 );
 
-export default HubStops;
+export default HubStopsModel;

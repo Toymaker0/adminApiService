@@ -2,63 +2,98 @@ const hubsData=[
     {
         "hub_id": 1,
         "hub_name": "Madhya Kailash",
-        "hub_coordinates":"point"
+        "hub_coordinates": {
+            "type": "point",
+            "coordinates": ["13.006077624612367", "80.24744132562095"]
+        }
     },
     {
         "hub_id": 2,
         "hub_name": "SRP",
-        "hub_coordinates":"point"
+        "hub_coordinates": {
+            "type": "point",
+            "coordinates": ["12.978580858871887", "80.25259618846148"]
+        }
     },
     {
         "hub_id": 3,
         "hub_name": "Thuraipakkam Signal",
-        "hub_coordinates": "point"
+        "hub_coordinates": {
+            "type": "point",
+            "coordinates": ["12.937014730378833", "80.2344513277855"]
+        }
     },
     {
         "hub_id": 4,
         "hub_name": "Shollinganallur Signal",
-        "hub_coordinates": "point"
+        "hub_coordinates": {
+            "type": "point",
+            "coordinates": ["12.901034638987943", "80.22797425211101"]
+        }
     },
     {
         "hub_id": 5,
         "hub_name": "Navallur",
-        "hub_coordinates": "point"
+        "hub_coordinates": {
+            "type": "point",
+            "coordinates": ["80.22677533865121", "12.844898318527227"]
+        }
     },
     {
         "hub_id": 6,
         "hub_name": "Kelambakkam",
-        "hub_coordinates": "point"
+        "hub_coordinates": {
+            "type": "point",
+            "coordinates": ["12.786248069265005", "80.22027943729121"]
+        }
     },
     {
         "hub_id": 7,
         "hub_name": "Medavakkam Junction",
-        "hub_coordinates": "point"
+        "hub_coordinates": {
+            "type": "point",
+            "coordinates": ["12.91519","80.1758673"]
+        }
     },
     {
         "hub_id": 8,
         "hub_name": "Kamatchi Hospital",
-        "hub_coordinates": "point"
+        "hub_coordinates": {
+            "type": "point",
+            "coordinates": ["12.9538882","80.1879321"]
+        }
     },
     {
         "hub_id": 9,
         "hub_name": "Shollinganallur Water Tank",
-        "hub_coordinates": "point"
+        "hub_coordinates": {
+            "type": "point",
+            "coordinates": ["12.8972105","80.2460405"]
+        }
     },
     {
         "hub_id": 10,
         "hub_name": "Tidel Park",
-        "hub_coordinates": "point"
+        "hub_coordinates": {
+            "type": "point",
+            "coordinates": ["12.987451043435415", "80.25157797948319"]
+        }
     },
     {
         "hub_id": 11,
         "hub_name": "Siruseri",
-        "hub_coordinates":"point"
+        "hub_coordinates": {
+            "type": "point",
+            "coordinates": ["12.822555757968118", "80.21948957361477"]
+        }
     },
     {
         "hub_id": 12,
         "hub_name": "Sipcot IT Park",
-        "hub_coordinates": "point"
+        "hub_coordinates": {
+            "type": "point",
+            "coordinates": ["12.82685454912683", "80.21934357068093"]
+        }
     }
 ]
-
 export default hubsData

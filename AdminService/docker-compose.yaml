@@ -20,7 +20,7 @@ services:
 
   node_db:  # Fix: Move this to the same level as node_app
     container_name: node_db
-    image: postgres:12
+    image: postgis/postgis:16-3.4
     ports: 
       - "5432:5432"
     environment:

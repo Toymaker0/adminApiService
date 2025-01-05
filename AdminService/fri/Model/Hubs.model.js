@@ -3,7 +3,7 @@ import Sequelize from "sequelize";
 
 
 
-const Hubs = sequelize_conn.define('hubs', {
+const HubsModel = sequelize_conn.define('hubs', {
     hub_id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -17,11 +17,11 @@ const Hubs = sequelize_conn.define('hubs', {
         type: Sequelize.STRING(255),
     },
     hub_coordinates: {
-        type: Sequelize.STRING('POINT', 432),
+        type: Sequelize.GEOMETRY('POINT', 4326),
         allowNull: false,
-        
+        unique: true
     },
     },{ schema: "route_management"}
 );
 
-export default Hubs;
+export default HubsModel;
