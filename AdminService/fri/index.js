@@ -18,15 +18,29 @@ setTimeout(() => {
         });
 }, 3000);
 
-app.post('/addStop', (req, res) => {
+app.post('/addStop', async(req, res) => {
     console.log(req.body);
     try {
-        stopClass.addStop(req.body) 
+        const A= await stopClass.addStop(req.body) 
+        console.log(A);
+        
+        res.send(A);
     } catch (error) {
         console.log(error);
         
     }
-    
+})
+app.post('/editStop', async(req, res) => {
+    console.log(req.body);
+    try {
+        const A= await stopClass.editStop(req.body) 
+        console.log(A);
+        
+        res.send(A);
+    } catch (error) {
+        console.log(error);
+        
+    }
 })
 
 try {

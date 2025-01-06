@@ -9,8 +9,10 @@ class StopClass {
         return StopsModel.bulkCreate(stopsDetails);
     }
     addStop(stopDetails) {
-
         return StopsModel.create(stopDetails);
+    }
+    editStop(stopDetails) {
+        return StopsModel.update(stopDetails, { where: { stop_id: stopDetails.stop_id } });
     }
 }
 export default StopClass;
